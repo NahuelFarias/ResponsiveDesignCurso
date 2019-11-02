@@ -1,0 +1,368 @@
+/* reglas
+selectores
+declaraciones
+propiedades
+valores*/
+
+/*header{
+    background:pink; >>El "!important" se salta la jerarquia y le da prioridad ante todo
+}*/
+
+/*TIPOS DE SELECTORES:
+>Selector de etiqueta: Ej: header - section - article - nav - etc
+>Selector descendente:
+    Ej: body header div nav ol li a 
+>Selector de clase 
+    Nota: Las class se pueden replicar, en cambio los id son únicos
+*/
+
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+} /* El boy engloba a todo, por eso le HEREDA el cambio de tipografia a todos los hijos del mismo */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal; /*Define el “peso” de la letra, negrita, normal, light y 
+  normalmente se indica en múltiplos de 100 o usando keywords. */
+  /* font-style: italic; cursiva */
+}
+
+h1 {
+  font-size: 40px; /*Modifica el tamaño de la fuente*/
+  line-height: 1.5em; /*Modifica el espaciado entre las letras del texto.*/
+  letter-spacing: -.2px; /*Modifica el espacio entre lineas*/
+  color: white;
+  margin: 0;
+  -webkit-text-size-adjust: 0.5px black;
+  /* margin: top right bottom left; (Sentido Horario) 
+  Al igual funciona padding*/
+  /* margin: (top-bottom) (rigth-left) auto (centra el elemento)*/
+  /* text-transform: uppercase; Permite transformar el estado de mayúsculas / minúsculas en el texto, usando uppercase para mayúsculas sostenidas, etc
+  text-decoration: underline; Define el decorado del texto como subrayado, tachado, con subrayado superior, etc.*/
+}
+
+h1 strong {
+  color: #CA781B;
+}
+
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px; 
+}
+
+.hero{
+  height: 300px;
+  background-image: url('../Imagenes/stars1.png');
+  /* background-color: #0F0E1E; */
+  background-size: contain;
+  background-repeat: repeat;
+  /* background-position-x: right; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.hero-image {
+  object-fit: contain;
+}
+
+.logo img {
+  object-fit: contain;
+}
+
+.portfolio{
+  background: #fafafa;
+  padding: 20px;
+}
+
+.project {
+  /* border-top: tamaño tipo color; */
+  /* border-color:  red;
+  border-width: 15px;
+  border-style: solid; */
+  /* border-top-color: aqua; */
+  /* border-top-left-radius: 50px; */
+  border: 1px solid gray;
+  border-radius: 10px;
+  /* margin: 10px; */
+  margin-bottom: 15px;
+  /* margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px; */
+  padding: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /*Centrar y separar elementos*/
+}
+
+.project-title {
+  font-size: 30px;
+  margin: 10px 0;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
+
+.project-course,
+.project-date,
+.project-url {
+  margin: 10px 0;
+}
+
+.porject-descripcion {
+  font-size: 20px;
+}
+
+.project strong {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.project-details{
+  width: 500px;
+}
+
+.project-imageContainer{
+  width: 500px;
+}
+
+.header{
+  background-color: #121121;
+  color: white;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header img {
+  padding-top: 15px;
+}
+
+.menu {
+  height: inherit;
+}
+
+.header ol {
+  display: flex;
+  height: inherit;
+}
+
+.header ol li {
+  height: inherit;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+/* selector descendente */
+.header a{
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.flexbox{
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+
+.box{
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid red;
+
+  flex-shrink: 0;
+}
+
+.footer{
+  color: white;
+  background-color: #080A30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* solucion precaria */
+.disegned {
+  padding-left: 350px;
+}  
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a {
+  color: white;
+}
+
+.event-list-title {
+  margin-left: 20px;
+}
+
+.event-list{
+  display: flex;
+  flex-wrap: wrap;;
+}
+
+.event {
+  /* border: 1px solid black; */
+  margin: 10px;
+  width: 480px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #3787b6;
+}
+
+.event img {
+  width: 480px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-detail {
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.event-description {
+  text-align: left;
+}
+
+.event-url {
+  color: #056fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact {
+  background-color: #0F0E1E;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .social {
+  border: 1px solid red; 
+} */
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  /* border: 1px solid white; */
+  background-size: 50px 50px;
+}
+
+.social-link.twitter {
+  background-image: url('../Imagenes/twitter.png');
+}
+
+.social-link.facebook {
+  background-image: url('../Imagenes/Facebook.png');
+}
+
+.social-link.github {
+  background-image: url('../Imagenes/kisspng-github.png');
+  background-size: 68px 68px;
+  background-position: center;
+}
+
+.social-link.instagram {
+  background-image: url('../Imagenes/instagram.png');
+}
+
+.form-email input {
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('../Imagenes/envelope.svg');
+  background-size: 15px 20px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: transparent;
+  color: white;
+  padding: 10px 0px;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+  /* margin: 10px auto 0; */
+}
+
+.form-email h3 {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.container {
+  /* border: 1px solid red; */
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+/* Deskport first: Empezar desde el media query mas grande */
+
+@media screen and (max-width: 1024px) {
+  
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    border: 10px solid green;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+}
+
+@media screen and (max-width: 320px) {
+  
+}

@@ -7,3 +7,6 @@ Medidas: el porcentaje (longitud referente al tamaño de los elementos padre), l
 
 El media queries es un módulo de css que hace posible al responsive design, éste existe desde el 2010 y se encarga de adaptar la representación del contenido a características del dispositivo.
 
+Uso de contenedores flexibles, que varíen su tamaño según la amplitud con la que cuentan en diversos dispositivos y permitan una óptima visualización.
+etiquetas de max-width y flex- wrap; éstas también te ayudarán a evitar que tu usuario necesite navegar la página de forma horizontal, pues la información se organizará en forma vertical para facilitar la experiencia.
+NOTA: Solo aplica si se utiliza display flex

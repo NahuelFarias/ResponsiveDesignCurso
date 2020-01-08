@@ -1,0 +1,75 @@
+--> Conceptos elementales de Responsive Design
+
+Para abordar el campo del Responsive Design es necesario que tengas claridad sobre algunos conceptos básicos.
+
+Por este motivo, durante esta clase aprenderás qué es el Responsive Design, cuáles son los lenguajes de programación que lo hacen posible, 
+qué medidas son necesarias aplicar para lograr que tus proyectos se adapten a pantallas de diversas medidas y condiciones, cuáles son los 
+principios del Responsive Design (mostly fluid, colocación de columnas, layout shifter, tiny tweaks, off canvas).
+
+Finalmente, aprenderás el objetivo principal del Responsive Design: la óptima visualización de las web sites en cualquier dispositivo y 
+podrás tener referentes en www.mediaqueri.es .
+
+Patrones: mostly fluid, colocación de columnas, layout shifter, tiny tweaks, off canvas. Estos se pueden combinar.
+
+Viewport: Area visible del navegador / Portrait (Vertical) - Landscape (Horizontal) / Mobile First o Deskpot First
+
+
+--> Developer tools para Responsive Design
+
+Manejar las herramientas para lograr la variación de tamaños del website, asimismo, podrás verlas desde tu ordenador en tamaños de diversos
+dispositivos comúnmente usados; también verás la regla de medida -la cual te indicará medidas máximas y mínimas- y, por último, aprenderás
+a capturar fullsize screenshots.
+
+
+--> Meta viewport
+
+Esta es una etiqueta de metadatos que te ayudará a configurar tu website para que sea visible en dispositivos de menor tamaño. Por lo tanto,
+escribirás tu primera línea de código y la alojarás en el mismo proyecto de código que ya tenías desde el Curso de Desarrollo Web.
+
+Uno de los objetivos principales al usar esta etiqueta será que conserves la legibilidad de tu página web, al variar el escalado de tus
+contenidos.
+
+Para adaptar nuestro web site a cualquier medida de pantalla
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+La propiedad width controla el tamaño del viewport.
+Puede definirse con un número en pixeles como width=600 o con un valor especial device-width que es el equivalente al ancho de la pantalla
+en píxeles CSS en una escala de 100%.
+
+La propiedad initial-scale controla el nivel de zoom cuando la página se carga por primera vez.
+Las propiedades maximum-scale, minimum-scale, y user-scalable controlan la forma en cómo se permite a los usuarios aumentar o disminuir el
+zoom en la página.
+
+
+--> Medidas relativas útiles en Responsive Design
+
+Medidas: el porcentaje (longitud referente al tamaño de los elementos padre), los em (unidad relativa al tamaño de fuente especificada
+más cercano), los rem (unidad relativa al tamaño de fuente especificada en el ancestro más lejano, como html o body) y
+tamaños del viewport vw/vh (longitud relativa porcentual con respecto al viewport).
+
+
+--> Media queries
+
+El media queries es un módulo de css que hace posible al responsive design, éste existe desde el 2010 y se encarga de adaptar la
+representación del contenido a características del dispositivo.
+
+Usando mobile first
+Usaríamos min-width = desde
+
+Usando desktop first
+Usaríamos max-width = hasta
+
+
+--> Formas de incluir media queries
+
+Creando una nueva hoja de estilos e importandola al HTML con una condicion:
+<link rel="stylesheet" href="Css/media.css" media="screen and (max-width:768px)">
+
+Aplicando los media dentro de la hoja de estilos de la pagina.
+
+Dentro del tag style en el archivo HTML
+
+--> Repositorio del curso
+
+Aquí vas a poder encontrar el repositorio que vamos a esta utilizando durante el curso: 
+https://github.com/LeonidasEsteban/responsive-design-portafolio

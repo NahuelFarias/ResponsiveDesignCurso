@@ -1,0 +1,23 @@
+--> Videos HTML5
+
+ Como incluir un video en tu proyecto y, por lo tanto, lo modificarás para convertirlo en un material responsivo, es decir,
+ que sea coherente con tu trabajo de Responsive Design.
+
+tag <video>
+
+<video src="ruta" width="x" height="x" controls></video> 
+
+controls: Permite poder ver en el web los botones de repoducir, la linea del video, etc
+
+
+--> Video insertado
+
+Videos responsive en tu proyecto, originarios o alojados en otras plataformas (como youtube y/o vimeo). Por este motivo
+trabajarás con la etiqueta iframe.
+
+Ésta etiqueta hará posible que el video que insertes tenga la posibilidad de adaptarse a distintas formas de visualización, aunque,
+a pesar de ellas, aprenderás cuáles son las diferencias entre usar un video inserto y hacerlo desde html5.
+
+--> Fuentes de iconos
+--> Añadiendo un menú de hamburguesa
+--> Posicionando el menú

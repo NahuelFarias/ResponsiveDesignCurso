@@ -1,0 +1,62 @@
+--> Diseño elástico con max-width y flex-wrap
+
+Uso de contenedores flexibles, que varíen su tamaño según la amplitud con la que cuentan en diversos dispositivos y permitan
+una óptima visualización.
+
+Por otro lado, para hacer esto posible, aprenderás a aplicar las etiquetas de max-width y flex-wrap; éstas también te ayudarán
+a evitar que tu usuario necesite navegar la página de forma horizontal, pues la información se organizará en forma vertical para
+facilitar la experiencia.
+
+flex-wrap: Hace que los elementos se pongan uno abajo del otro cuando ya no poseen espacio para estar todos en la misma fila
+
+max-width: Se usa para dar un tamaño fijo al elemento padre
+
+NOTA: Solo aplica si se utiliza display flex
+
+
+--> Ajustando el Header
+
+
+--> Ajustando nuestro portafolio
+
+Mucho mejor usar "width: auto" a "width: 100%"
+
+max-width: 100%; /*Imagen Responsive*/
+
+--> Ajustando la sección de eventos
+
+flex-shrink es una propiedad que nos eprmite que el elemento no haga ningun tipo de rized
+
+--> Ajustando la sección de contacto y footer
+
+border: 1px solid transparent; Arreglamos asi el problema de los colapsos de los margenes de las cajas
+
+--> CSS positions
+
+Nos permiten superponer elementos
+
+Posiciones: estática, relativa, absoluta, fixed y sticky
+
+static: el default
+
+relative: Nos permite moverlo a nuestro gusto, pero el espacio que ocuparia el texto normalmente quedara vacio
+
+absolute: Se sale completamente del lugar que ocupaba el texto originalmente, se ubica de manera absoluta con el primer elemento que posea
+una posicion relative
+
+fixed: Es una posicion fija, no es relativo a ningun otro elemento
+
+sticky: Cuando llego a un elemento que posea este tipo de posicion el mismo se fijara en el viewport como si tuviera una posicion fixed
+
+Cuando aplicamos una pisicon que no sea la static se nos desbloaque dos conjuntos de propiedades:
+
+z-index : Nos dice que elemento esta encima de otro con un valor numerico de "capas"
+
+top rigth bottom left: Nos permitira mover nuestro elemento segun unas coordenadas que querramos
+
+
+--> Ajustando nuestra sección principal
+
+overflow: hidden; Para encasillar las imagenes correctamente si es que se desbordan
+
+background: rgba(0, 0, 0, .5);  Para darle mayor legibilidad al texto

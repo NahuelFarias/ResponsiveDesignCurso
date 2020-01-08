@@ -15,9 +15,58 @@ controls: Permite poder ver en el web los botones de repoducir, la linea del vid
 Videos responsive en tu proyecto, originarios o alojados en otras plataformas (como youtube y/o vimeo). Por este motivo
 trabajarás con la etiqueta iframe.
 
+iframe permite tomar un video de cualquier otro website y ademas tambien otras websites enteros.
+
+Calculo para las proporcion del video: 
+Para saber la altura se debe hacer: height * 100 / width. 
+Y si necesitan saber el porcentaje necesario del ancho es: width * 100 / height.
+
+En conclusión, si el video es de 16:9 en horizontal el código CSS del div contenedor va a quedar:
+
+.flexible-video {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+}
+En cambio, si el video es 16:9 pero vertical (o sea 9:16), queda:
+
+.flexible-video {
+    width: 100%;
+    height: 0;
+    padding-top: 177.77%;
+    position: relative;
+}
+
+El contenido que se inserta varia sus medidas segun la etiqueta iframe y no por las medidas tanto del video, no lo maneja como si fuera
+una imagen.
+
 Ésta etiqueta hará posible que el video que insertes tenga la posibilidad de adaptarse a distintas formas de visualización, aunque,
 a pesar de ellas, aprenderás cuáles son las diferencias entre usar un video inserto y hacerlo desde html5.
 
+
 --> Fuentes de iconos
+
+Todo menú necesita de la presencia de iconos, por este motivo, en esta clase aprenderás sobre las fuentes de iconos y las aplicarás
+en la realización del menú de tu proyecto.
+
+En este abordaje a las fuentes de iconos, conocerás la plataforma icomoon.io, en ella podrás importar o añadir familias de iconos,
+desde tu computador o desde el sistema.
+
+Posteriormente, llevarás los archivos que selecciones a tu editor de código, allí trabajarás sobre ellos con la etiqueta @font- face,
+que acogerá a otros atributos como font- family, font- style y font- weigth, font- variant, entre otras.
+
+pseudoelementos de css -- investigar
+
+Se ultiliza la etiqueta <i>
+
+
 --> Añadiendo un menú de hamburguesa
+
+Convertirás el ícono que has elegido según las fuentes de íconos y le destinarás una función, es decir, le adjudicarás un
+“call to action” o llamado a la acción. Así, tu usuario sabrá cómo relacionar el ícono a la función que necesita realizar.
+En conclusión, durante la clase, Leonidas te enseñará diversas técnicas para desarrollar tu menú de hamburguesa o menú desplegable
+de múltiples opciones, en la página web que estas desarrollando, en estas formas trabajarás sobre las medidas, los colores, el background
+color, el borde, el display y, algo fundamental, las posiciones de css que ya aprendiste en la clase correspondiente a este tema.
+
 --> Posicionando el menú

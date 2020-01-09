@@ -415,6 +415,21 @@ figure {
   position: relative;
 }
 
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* == 20px */
+  background-color: rgba(0, 0, 0, .8); /* El ultimo hace referencia a la OPACIDAD */
+  display: none;
+  line-height: 40px; /* Para centrarlo verticalmente */
+  text-align: center; /* Ya que es un texto se puede alinear asi de fomra horizontal */
+  position: fixed;
+  z-index: 4;
+  left: 5px; /* Me permiten mover el objeto segun quiera en la pagina */
+  top: 5px;
+  color: white; /* Como es un texto asi puedo cambiarle el color */
+}
+
 /* Deskport first: Empezar desde el media query mas grande */
 
 @media screen and (max-width: 1024px) {
@@ -444,6 +459,10 @@ figure {
 }
 
 @media screen and (max-width: 767px) {
+  .burger-button {
+    display: block;
+  }
+
   .header {
     display: block;
     height: auto;
@@ -456,10 +475,34 @@ figure {
   }
   .header a {
     justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-bottom: .5em;
   }
   .header .logo {
     height: max-content;
     text-align: center;
+  }
+
+  .menu {
+    position: fixed;
+    /* background: red; */
+    background: rgba(5, 111, 255, .9);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    /* height: 100vh; */
+    bottom: 0; /* Para alinearlo ya que el ol tenia un alto det */ 
+    display: flex; /* Todo para alinear el elemento con felx */ 
+    align-items: center;
+    justify-content: center;
+    transition: .3s; /* Animacion de entrada del menu */
+  }
+
+  .menu.is-active { /* Cuando el elemento posee la clase menu y ademas is-active va a intervenir el codgigo */ 
+     left: 0;
   }
 
   .project {

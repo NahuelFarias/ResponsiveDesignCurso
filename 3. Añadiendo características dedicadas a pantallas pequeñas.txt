@@ -69,4 +69,36 @@ En conclusión, durante la clase, Leonidas te enseñará diversas técnicas para
 de múltiples opciones, en la página web que estas desarrollando, en estas formas trabajarás sobre las medidas, los colores, el background
 color, el borde, el display y, algo fundamental, las posiciones de css que ya aprendiste en la clase correspondiente a este tema.
 
+Técnica para centrar aparte de flexbox, usando el display: block;
+
+line-height: 40px;
+text-align: center;
+
+Con el display none ocultamos el menu para pantallas mayores a 767
+
 --> Posicionando el menú
+
+ En esta clase definirás los tamaños de tu menú, de los textos y, especialmente, trabajarás sobre sus estilos.
+ Estos estilos los irás comprobando en distintas opciones de visualización o tamaños de dispositivos, con el propósito
+ de estar realizando un trabajo efectivo en cuanto al responsive design. 
+
+ 
+  .menu {
+    position: fixed;
+    /* background: red; */
+    background: rgba(5, 111, 255, .9);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    /* height: 100vh; */
+    bottom: 0; /* Para alinearlo ya que el ol tenia un alto det */ 
+    display: flex; /* Todo para alinear el elemento con felx */ 
+    align-items: center;
+    justify-content: center;
+    transition: .3s; /* Animacion de entrada del menu */
+  }
+
+  .menu.is-active { /* Cuando el elemento posee la clase menu y ademas is-active va a intervenir el codgigo */ 
+     left: 0;
+  }

@@ -15,7 +15,7 @@
     </style>-->
 </head>
 <body>
-    <i class="icon-menu burger-button"></i> <!--Icono-->
+    <i class="icon-menu burger-button" id="burguer-menu"></i> <!--Icono-->
     <!-- <div class="flexbox">
         <div class="box"></div>
         <div class="box"></div>
@@ -32,13 +32,13 @@
             <nav class="menu">
                 <ol>
                     <li>
-                        <a href="#portafolio">Portafolio</a>  <!--EL # IDENTIFICA QUE ES UN ENLACE INTERNO DENTRO DE LA MISMA PAGINA-->
+                        <a href="#portafolio" id="portafolio-menu">Portafolio</a>  <!--EL # IDENTIFICA QUE ES UN ENLACE INTERNO DENTRO DE LA MISMA PAGINA-->
                     </li>                                     <!--Con / se hacen enlaces a paginas fuera de la actual-->
                     <li>
-                        <a href="#eventos">Experiencia</a>
+                        <a href="#eventos" id="eventos-menu">Experiencia</a>
                     </li>
                     <li>
-                        <a href="#contacto">Trabajemos Juntos</a>
+                        <a href="#contacto" id="contacto-menu">Trabajemos Juntos</a>
                     </li>
                 </ol>
             </nav>
@@ -181,16 +181,63 @@
     <footer class="footer">
         <div class="container">
             <div>
-                <p class="firma">
+                <p>
                     Curso de Desarrollo Web Online 2018 <img src="Imagenes/platzi.png" width="120" alt="platzi"> 
                 </p>
             </div>
-            <div>
-                <p class="disegned">
+            <div class="disegned">
+                <p>
                     Designed with &#128147 by <a href="https://twitter.com/NahuelFarias_" target="_blank"/> @nahuelfarias12
                 </p>
             </div>
         </div>
     </footer>
+    <script>
+      // console.log('Hola mundo! Es mi primera linea en JS');
+      const ipad = window.matchMedia('screen and (max-width: 767px)'); // Media query en JS
+
+      const menu = document.querySelector('.menu'); // Me seleccionan dentro des codigo los selectores de clases (.) o id (#) 
+      // console.log(menu);                           que se implementamos en el CSS/HTML
+
+      const burgerButton = document.querySelector('#burguer-menu'); 
+      // console.log(burgerButton);
+
+      const portafolio = document.querySelector('#portafolio-menu');
+      const evento = document.querySelector('#eventos-menu');
+      const contacto = document.querySelector('#contacto-menu');
+
+      ipad.addListener(validation);
+
+      function validation (event) {
+        if (event.matches) { // Me dice si se cumple o no la media query
+          burgerButton.addEventListener('click', hideShow);
+          portafolio.addEventListener('click', linkHide);    // Prendo los listener
+          evento.addEventListener('click', linkHide);
+          contacto.addEventListener('click', linkHide);
+        } else {
+            burgerButton.removeEventListener('click', hideShow);
+            portafolio.removeEventListener('click', linkHide);   // Apago los listener
+            evento.removeEventListener('click', linkHide);
+            contacto.removeEventListener('click', linkHide);
+        }
+      }
+
+      validation(ipad); // Llamo a la funcion aunque no se haga ningun cambio, es decir la primerz vez que cargue la pagina
+    
+      function linkHide() {
+          if (menu.classList.contains('is-active')) {
+            menu.classList.remove('is-active'); // Me remueve la clase si es que la tiene
+          } 
+      }
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active'); // Me remueve la clase si es que la tiene
+        } else {
+          menu.classList.add('is-active'); // Me agrega esa clase a mi clase anterior
+        }
+      }
+
+    </script>
 </body>
 </html>

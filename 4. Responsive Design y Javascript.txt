@@ -1,0 +1,74 @@
+--> Añadiendo Javascript para detección de eventos
+
+La interactividad que necesitarás para tu menú, se concentrará en algunas acciones, la primera de ellas es la que
+sucede al cliquear sobre el botón o el icono.
+
+Para lograr esto harás uso del lenguaje de programación JavaScript, recuerda que este lenguaje hace posible la
+codificación de experiencias interactivas en el desarrollo web
+
+
+--> Media queries con JavaScript
+
+En esta clase aprenderás a implementar media queries con JavaScript, para esto usarás instrucciones como window.matchMedia,
+console.log -nuevamente-, event, entre otros.
+
+El propósito es que tu menú quede listo para ofrecer una experiencia interactiva y sea flexible en distintos dispositivos,
+es decir, que sea interactivo y responsivo.
+
+De forma adicional, aprenderás a agregar y quitar listeners de tus eventos, pues no siempre son la mejor opción en la experiencia
+de navegación.
+
+Lo que debemos correguir es no usar el codigo JS que hicimos para el menu hamburguesa cuando este ni siquiera aparece, para eso usamos
+media queries en JS
+
+Para optimizar la pagina cuando se cumple el media query debemos activar los listener, y en el caso que no se cumpla, debemos quitarlos
+para no consumir recursos inecesariamente. Ademas es mucho mas dinamico
+
+
+--> Creando un servidor de archivos estáticos con Node
+
+En esta clase verás qué diferencias hay entre el navegador y la visualización del teléfono, a lo que se le conoce como
+remote debugging y de lo que aprenderás más adelante.
+
+Por ahora, aprenderás a realizar un servidor de archivos estáticos con Node, esto te permitirá contar con las herramientas
+necesarias para trabajar sobre el remote debugging en distintos dispositivos. Así que, en primer lugar vas a descargar el software
+de Node, que te permitirá crear los archivos estáticos
+
+Con la instalacion de node obtengo npm, que es el gestor de paquetes de node
+
+Consejo para la terminal, no tener carpetas cuyo nombre tenga espacios
+
+https://www.npmjs.com/package/static-server Alli todos los pasos a seguir importantes para llevar a cabo el servidor estatico local
+
+Es muy importante que mi doc principal se llame index.html para que el servidor lo levante
+
+Para levantarlo en el movil debo cambiar lo de local host por la ip de mi pc. La mia es: 192.168.0.23 
+Luego como ambos dispositivos estan en la misma red, ingreso desde el movil a esa direccion
+
+
+--> Remote Debugging en iOS
+
+En este momento ya debes poder acceder a tu proyecto para depurarlo desde tu teléfono móvil.
+
+En esta clase vas a aprender a trabajar sobre el rendimiento de la interfaz que ves en la navegación, de esta manera,
+aprenderás a corregir bugs y trabajar desde el inspector de elementos de tu celular, ya que es posible que accedas a él
+y trabajes en él. Finalmente aprenderás a configurar el remote debugging para iOS.
+
+Resolvimos dos bugs: El padding del portfolio y le entrada en accion del menu
+
+
+--> Remote Debugging en Android y puliendo últimos detalles
+
+Así como aprendiste a configurar el remote debugging para iOS, en esta clase aprenderás a configurarlo para dispositivos
+Android. Para aprender a hacerlo, debes tener conectado tu teléfono a tu computador vía usb y activar el menú de
+desarrollador -el cual se encuentra en la configuración-; al activarlo debe aparecer un menú adicional desde el cual
+podrás utilizar el inspector de elementos en tu computador, desde el explorador que tengas (que para esta ocasión será Google Chrome). 
+Desde este lugar podrás modificar los diversos elementos de tu proyecto, aplicando las herramientas y conocimientos que ya dominas
+hasta el momento. Por último, ¡pulirás los detalles finales de tu proyecto!
+
+Habilitar herramientas de desarollador en el movil y habilitar Depuracion por USB
+
+chrome://inspect/
+
+--> ¿Qué curso sigue?
+
